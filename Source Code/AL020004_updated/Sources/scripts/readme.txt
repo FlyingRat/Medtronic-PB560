@@ -1,0 +1,1 @@
+Pour tester le comportement de la carte alim sur mauvais CRC, il suffit d'ajouter l'option --gen-bad-crc dans le fichier update_crc_al.bat

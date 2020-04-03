@@ -1,0 +1,189 @@
+039281023.SLDPRT
+09-48-4038.SLDPRT
+09-48-4128.SLDPRT
+10000916.SLDPRT
+10049560_Fan Assy (ref ASM).SLDASM
+10049560_Routed wires (asm ref Part).SLDPRT
+10049560_ventil SUNON 40x40x20.SLDPRT
+10079556.SLDASM
+10079556_Support.SLDPRT
+10083602.SLDPRT
+10093284.SLDPRT
+10096315.SLDASM
+10096505_Board (ref ECAD).SLDPRT
+10096509.SLDASM
+10096510.sldasm
+10096510_Bare Board.SLDPRT
+10096511.SLDASM
+10096512.SLDASM
+10100017.SLDPRT
+10100018.SLDPRT
+1mm bumper.SLDPRT
+2004200 Rondelle plate - MN INOX 3 x 8 EP 0.8.sldprt
+22-05-7028.SLDPRT
+22-27-2021.SLDPRT
+26-48-1035.SLDPRT
+26-48-1125.SLDPRT
+2877500 mousse adhesive 3x20 L‚gendair.SLDPRT
+2931200 mousse ‚p 10mm .SLDPRT
+2957500 Vis TCB D 3.5 x 8 hexalobes acier zingu‚.sldprt
+2957600 Vis TCB D 3.5 x 16 hexalobes acier zingu‚.sldprt
+2960100 Vis TCB M3-8 hexalobes acier zingu‚.sldprt
+2960600 Vis TF M4 x 10 hexalobes acier zingu‚.sldprt
+2961500 Pieds autocollants 12.7x12.7 ep5.8.SLDPRT
+2963500 batterie legendair.SLDPRT
+2963800 Vis tˆte frais‚e M3 x 8.SLDPRT
+2964000 travers‚e cloison PMC4202.SLDPRT
+2966100 Vis TCB M3 x 5 exalobes acier zingu‚ .SLDPRT
+2966300 (ref AML).SLDPRT
+2970100 goupille cylindrique DIA 2x28.SLDPRT
+2970300 raccord droit 2.4x3.2 plastique.SLDPRT
+2970400 Raccord TE 2.4 plastique.SLDPRT
+2970800 Vis TCB D 3 x 6 hexalobes acier zingu‚.SLDPRT
+2970900 vanne  A-M O2 FAS.SLDPRT
+2970999 Vanne  A-M O2 FAS.SLDASM
+2971600 collier adh‚sif ajustable.SLDPRT
+2973900 (ref AML).SLDPRT
+2980100 ferrite 18.8x28.5x13.2.SLDPRT
+3804800 Filtre entr‚e d'air.SLDPRT
+3808400.SLDASM
+3808400_plastic only.SLDPRT
+3808801 support cone expiration legendair.SLDPRT
+3809700 Bouton molet‚ imperdable.SLDPRT
+3810200.SLDPRT
+3812400 entretoise hexa M-F M3.SLDPRT
+3812500 tole blindage toron moteur.SLDPRT
+3814200.SLDPRT
+3814400 ressort capot.SLDPRT
+3822000.SLDPRT
+3822500.SLDASM
+3822500_WIRES.SLDPRT
+3823200 exterieur poign‚e.SLDPRT
+3823200 int‚rieure poign‚e.SLDPRT
+3823200.sldasm
+3824300 Assy with labels (ref Assy).SLDASM
+3824300_Main block.SLDPRT
+3824300_Plastic Insert.SLDPRT
+3825500.SLDPRT
+3825700 ‚tiq ‚xpiration usage unique.SLDPRT
+3826102 ‚tiquette rappel alarme.SLDPRT
+3826300 ‚tiquette ATTENTION SECTEUR.SLDPRT
+3827900.SLDPRT
+3828200 etiq ident caisson turbine.SLDPRT
+3828200.SLDPRT
+3828299 REF ASSY (INCLUDES FOAM).SLDASM
+3828703 ‚tiquette US o2.SLDPRT
+3828800 etiq entr‚e d'air symbolis‚e.SLDPRT
+3838600 etiq ID+code barre revB.SLDPRT
+3838600 ‚tiquette tra‡abilit‚ .SLDPRT
+3838600.SLDPRT
+3839402 etiq sortie d'air symbolis‚e.SLDPRT
+3839403 ‚tiquette connexion valve.sldprt
+3845900_cable.SLDPRT
+3845900_ferrite tube plat 1,3x6,5 prof10 larg 40.SLDPRT
+3846100.SLDASM
+3846100_Cable.SLDPRT
+39-26-7265.SLDPRT
+39-28-5104.SLDPRT
+39-28-5264.SLDPRT
+3M 4032 x30mm.SLDPRT
+3M 7810-0000PR.SLDPRT
+4096600 (PB560) 2017.SLDASM
+4096600 ‚tiquette identification XL2.SLDPRT
+4096600.M00.023 boitier capteur debit.SLDPRT
+43650-0224.SLDPRT
+60601-1 Test Finger.SLDPRT
+702-09 Entretoise AV Legendair.SLDPRT
+90151-2110.SLDPRT
+901700010 avec patte.SLDPRT
+90635-1102 +90170-0010 molex avec patte.SLDASM
+90635-1102.SLDPRT
+AFFICHEUR TWIN.SLDPRT
+alimentation phase 2.SLDPRT
+alimentation xp.sldasm
+Back End Cap.SLDPRT
+Batt Assy.SLDASM
+Batt Contacts tab.SLDPRT
+Batt PCB Assy.SLDASM
+Batt PCB.SLDPRT
+boitier capteur pression asdx.SLDPRT
+buzzer1.SLDPRT
+Cable tie (ref AML).SLDPRT
+cache transfo.SLDPRT
+capot 2 capteurs P phase 2.SLDPRT
+capot 3 capteurs P phase 2.SLDPRT
+capteur debit.SLDPRT
+capteur pression absolue.SLDPRT
+capteurpressionASDX001D44R.SLDPRT
+capteurpressionASDX100D44R.SLDPRT
+carte buzzer.SLDPRT
+carte clairitec.SLDPRT
+condensateur C88.SLDPRT
+condensateur dia 10.SLDPRT
+condensateur.SLDPRT
+connect molex 22-01-2025.SLDPRT
+connect molex 22-01-2087.SLDPRT
+connecteur 12-30V.SLDPRT
+connecteur USB A vertical.SLDPRT
+connecteur USB miniB.SLDPRT
+Coude banjo M5-tuyau 6.SLDPRT
+double face.SLDPRT
+embase cpu l‚gendair phase 2 ind 01.SLDPRT
+embase cpu.SLDPRT
+entretoise hexa  m3x12.SLDPRT
+entretoise hexa  m3x8.SLDPRT
+entretoise richco lg16.SLDPRT
+etiq reperage vanne O2.SLDPRT
+Exh Valve connector.SLDPRT
+Extruded housing.SLDPRT
+feritte nappe afficheur.SLDPRT
+filtre murata.SLDPRT
+Front End Cap.SLDPRT
+HARTING 09185107323.SLDPRT
+HIROSE HR25A-7R-8S.SLDPRT
+HIROSE HR30-6R-6S.SLDPRT
+I0 178 Entretoise AR Legendair.SLDPRT
+I0 179 Entretoise Mediane Legendair.SLDPRT
+INGUN GKS 913 305 230 A 15 02 S.SLDPRT
+Insp Mod Connector.SLDPRT
+isolant adh‚sif capot capteur.SLDPRT
+isolant adh‚sif ens afficheur.SLDPRT
+Joint blindage conducteur 72x21x‚p4.SLDPRT
+list.txt
+MODULE PRISE 230+INTER.SLDPRT
+MOLEX 22-05-7088.SLDPRT
+MOLEX 22-05-7098.SLDPRT
+MOLEX 43645 0200.SLDPRT
+MOLEX 43650-0212.SLDPRT
+Molex 90635-1262.SLDPRT
+new circuit support alimentation avec usb.SLDPRT
+PMCD1204.sldasm
+PRECI-DIP 811-S1-002-30-014101.SLDPRT
+regulateur.SLDPRT
+Rondelle plate - ZU  3 x 6 EP 0.8.sldprt
+self debout.SLDPRT
+switch.SLDPRT
+thermistances CTN.SLDPRT
+transfo.SLDPRT
+tuyau  droit sortie vanne O2.SLDPRT
+tuyau 15x21 silicone.SLDPRT
+tuyau alim ballonnet1.6x4.8.SLDPRT
+tuyau alim vanne 1.6x4.8.SLDPRT
+tuyau alim vanne 4x6.SLDPRT
+tuyau d‚bit expi P1.SLDPRT
+tuyau d‚bit expi P2.SLDPRT
+tuyau d‚bit inspi P1.SLDPRT
+tuyau d‚bit inspi P2.SLDPRT
+tuyau O2 entr‚e vanne.SLDPRT
+tuyau pression interne1.6x4.8.SLDPRT
+tuyau pression prox1.6x4.8.SLDPRT
+tuyau pression vanne pilot1.6x4.8.SLDPRT
+tuyau sortie vanne pilot1.6x4.8.SLDPRT
+valve chiprop .SLDPRT
+valve chiprop.SLDASM
+Vis KA22x5 hexalobes.SLDPRT
+Vis TCB M3-12 hexalobes acier zingu‚.sldprt
+_100800_8.sldprt
+_100901_6.sldprt
+_PMCD1204_BODY_2.sldprt
+_PMC_LATCH_4.sldprt

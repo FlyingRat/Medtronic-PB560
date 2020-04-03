@@ -1,0 +1,91 @@
+// v_2.45.2, Mon Mar 30 17:41:35 2020
+#line 1 "..\\..\\SRC\\HMI\\HMI_Pixel.cpp"
+#line 37 "..\\..\\SRC\\HMI\\HMI_Pixel.hpp"
+struct Pixel; typedef char bool;
+#line 33 "..\\..\\SRC\\GENERAL\\typedef.h"
+typedef int e_BOOL;
+#line 64
+typedef unsigned UWORD16;
+#line 37 "..\\..\\SRC\\HMI\\HMI_Pixel.hpp"
+struct Pixel {
+#line 43
+UWORD16 X; UWORD16 Y;}; extern void *__nw__FUi(unsigned);
+#line 35 "..\\..\\SRC\\HMI\\HMI_Pixel.cpp"
+extern struct Pixel *__ct__5PixelFv(struct Pixel *);
+
+
+
+
+extern struct Pixel *__ct__5PixelFUiT1(struct Pixel *, UWORD16, UWORD16);
+#line 51
+extern bool __ne__5PixelFRC5Pixel(struct Pixel *const, const struct Pixel *);
+#line 45
+extern void Init__5PixelFUiT1(struct Pixel *const, UWORD16, UWORD16);
+#line 56
+extern void SetX__5PixelFUi(struct Pixel *const, UWORD16);
+
+
+
+
+extern UWORD16 GetX__5PixelCFv(const struct Pixel *const);
+
+
+
+
+extern void SetY__5PixelFUi(struct Pixel *const, UWORD16);
+
+
+
+
+extern UWORD16 GetY__5PixelCFv(const struct Pixel *const);
+
+
+
+
+extern e_BOOL IsZero__5PixelFv(struct Pixel *const);
+#line 35
+struct Pixel *__ct__5PixelFv( struct Pixel *this)
+{  if ((this != ((struct Pixel *)0)) || ((this = ((struct Pixel *)(__nw__FUi(4U)))) != ((struct Pixel *)0))) {
+Init__5PixelFUiT1(this, 0U, 0U); } return this;
+}
+
+struct Pixel *__ct__5PixelFUiT1( struct Pixel *this,  UWORD16 _X,  UWORD16 _Y)
+{  if ((this != ((struct Pixel *)0)) || ((this = ((struct Pixel *)(__nw__FUi(4U)))) != ((struct Pixel *)0))) {
+Init__5PixelFUiT1(this, _X, _Y); } return this;
+}
+#line 51
+bool __ne__5PixelFRC5Pixel( struct Pixel *const this,  const struct Pixel *_P)
+{
+return (char)(((GetX__5PixelCFv(((const struct Pixel *)this))) != (GetX__5PixelCFv(_P))) || ((GetY__5PixelCFv(((const struct Pixel *)this))) != (GetY__5PixelCFv(_P))));
+}
+#line 45
+void Init__5PixelFUiT1( struct Pixel *const this,  UWORD16 _X,  UWORD16 _Y)
+{
+SetX__5PixelFUi(this, _X);
+SetY__5PixelFUi(this, _Y); return;
+}
+#line 56
+void SetX__5PixelFUi( struct Pixel *const this,  UWORD16 _X)
+{
+(this->X) = _X; return;
+}
+
+UWORD16 GetX__5PixelCFv( const struct Pixel *const this)
+{
+return (this->X);
+}
+
+void SetY__5PixelFUi( struct Pixel *const this,  UWORD16 _Y)
+{
+(this->Y) = _Y; return;
+}
+
+UWORD16 GetY__5PixelCFv( const struct Pixel *const this)
+{
+return (this->Y);
+}
+
+e_BOOL IsZero__5PixelFv( struct Pixel *const this)
+{
+return (e_BOOL)(((GetX__5PixelCFv(((const struct Pixel *)this))) == 0U) && ((GetY__5PixelCFv(((const struct Pixel *)this))) == 0U));
+}

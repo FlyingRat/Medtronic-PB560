@@ -1,0 +1,660 @@
+// v_2.45.2, Mon Mar 30 17:40:09 2020
+#line 1 "..\\ECMAIN.CPP"
+#line 23 "..\\error.h"
+enum an_error_code {
+ec_none,
+ec_abort_header,
+ec_terminate_called,
+ec_terminate_returned,
+ec_already_marked_for_destruction,
+ec_main_called_more_than_once,
+ec_pure_virtual_called,
+ec_bad_cast,
+ec_bad_typeid,
+ec_array_not_from_vec_new,
+ec_outofmemory,
+ec_last};
+#line 44 "C:\\Keil\\C166\\Inc\\stdlib.h"
+typedef unsigned size_t;
+#line 36 "..\\error.h"
+typedef enum an_error_code an_error_code;
+#line 93 "C:\\Keil\\C166\\Inc\\stdlib.h"
+extern void huge *malloc(size_t);
+extern void free(void huge *);
+#line 30 "..\\ECMAIN.CPP"
+extern void __sti__init__(void);
+#line 42
+extern void __abort_execution(an_error_code);
+#line 56
+extern void _main(void);
+#line 84
+extern void *__nw__FUi(size_t);
+#line 100
+extern void __dl__FPv(void *);
+#line 15 "..\\LH_ST10F276.h"
+ sfr ADCIC = 0xFF98;
+ sfr ADCON = 0xFFA0;
+ sfr ADDAT = 0xFEA0;
+ sfr ADDAT2 = 0xF0A0;
+
+ sfr ADEIC = 0xFF9A;
+sbit ADST = 0xFFA0 ^ 7;
+sbit ADBSY = 0xFFA0 ^ 8;
+sbit ADWR = 0xFFA0 ^ 9;
+sbit ADCIN = 0xFFA0 ^ 10;
+sbit ADCRQ = 0xFFA0 ^ 11;
+sbit ADCIE = 0xFF98 ^ 6;
+sbit ADCIR = 0xFF98 ^ 7;
+sbit ADEIE = 0xFF9A ^ 6;
+sbit ADEIR = 0xFF9A ^ 7;
+
+
+ sfr CC0 = 0xFE80;
+ sfr CC0IC = 0xFF78;
+ sfr CC1 = 0xFE82;
+ sfr CC1IC = 0xFF7A;
+ sfr CC2 = 0xFE84;
+ sfr CC2IC = 0xFF7C;
+ sfr CC3 = 0xFE86;
+ sfr CC3IC = 0xFF7E;
+ sfr CC4 = 0xFE88;
+ sfr CC4IC = 0xFF80;
+ sfr CC5 = 0xFE8A;
+ sfr CC5IC = 0xFF82;
+ sfr CC6 = 0xFE8C;
+ sfr CC6IC = 0xFF84;
+ sfr CC7 = 0xFE8E;
+ sfr CC7IC = 0xFF86;
+ sfr CC8 = 0xFE90;
+ sfr CC8IC = 0xFF88;
+ sfr CC9 = 0xFE92;
+ sfr CC9IC = 0xFF8A;
+ sfr CC10 = 0xFE94;
+ sfr CC10IC = 0xFF8C;
+ sfr CC11 = 0xFE96;
+ sfr CC11IC = 0xFF8E;
+ sfr CC12 = 0xFE98;
+ sfr CC12IC = 0xFF90;
+ sfr CC13 = 0xFE9A;
+ sfr CC13IC = 0xFF92;
+ sfr CC14 = 0xFE9C;
+ sfr CC14IC = 0xFF94;
+ sfr CC15 = 0xFE9E;
+ sfr CC15IC = 0xFF96;
+ sfr CC16 = 0xFE60;
+ sfr CC16IC = 0xF160;
+ sfr CC17 = 0xFE62;
+ sfr CC17IC = 0xF162;
+ sfr CC18 = 0xFE64;
+ sfr CC18IC = 0xF164;
+ sfr CC19 = 0xFE66;
+ sfr CC19IC = 0xF166;
+ sfr CC20 = 0xFE68;
+ sfr CC20IC = 0xF168;
+ sfr CC21 = 0xFE6A;
+ sfr CC21IC = 0xF16A;
+ sfr CC22 = 0xFE6C;
+ sfr CC22IC = 0xF16C;
+ sfr CC23 = 0xFE6E;
+ sfr CC23IC = 0xF16E;
+ sfr CC24 = 0xFE70;
+ sfr CC24IC = 0xF170;
+ sfr CC25 = 0xFE72;
+ sfr CC25IC = 0xF172;
+ sfr CC26 = 0xFE74;
+ sfr CC26IC = 0xF174;
+ sfr CC27 = 0xFE76;
+ sfr CC27IC = 0xF176;
+ sfr CC28 = 0xFE78;
+ sfr CC28IC = 0xF178;
+ sfr CC29 = 0xFE7A;
+ sfr CC29IC = 0xF184;
+ sfr CC30 = 0xFE7C;
+ sfr CC30IC = 0xF18C;
+ sfr CC31 = 0xFE7E;
+ sfr CC31IC = 0xF194;
+ sfr CCM0 = 0xFF52;
+ sfr CCM1 = 0xFF54;
+ sfr CCM2 = 0xFF56;
+ sfr CCM3 = 0xFF58;
+ sfr CCM4 = 0xFF22;
+ sfr CCM5 = 0xFF24;
+ sfr CCM6 = 0xFF26;
+ sfr CCM7 = 0xFF28;
+ sfr T0 = 0xFE50;
+ sfr T01CON = 0xFF50;
+ sfr T0IC = 0xFF9C;
+ sfr T0REL = 0xFE54;
+ sfr T1 = 0xFE52;
+ sfr T1IC = 0xFF9E;
+ sfr T1REL = 0xFE56;
+ sfr T7 = 0xF050;
+ sfr T78CON = 0xFF20;
+ sfr T7IC = 0xF17A;
+ sfr T7REL = 0xF054;
+ sfr T8 = 0xF052;
+ sfr T8IC = 0xF17C;
+ sfr T8REL = 0xF056;
+sbit CC0IR = 0xFF78 ^ 7;
+sbit CC0IE = 0xFF78 ^ 6;
+sbit CC1IR = 0xFF7A ^ 7;
+sbit CC1IE = 0xFF7A ^ 6;
+sbit CC2IR = 0xFF7C ^ 7;
+sbit CC2IE = 0xFF7C ^ 6;
+sbit CC3IR = 0xFF7E ^ 7;
+sbit CC3IE = 0xFF7E ^ 6;
+sbit CC4IR = 0xFF80 ^ 7;
+sbit CC4IE = 0xFF80 ^ 6;
+sbit CC5IR = 0xFF82 ^ 7;
+sbit CC5IE = 0xFF82 ^ 6;
+sbit CC6IR = 0xFF84 ^ 7;
+sbit CC6IE = 0xFF84 ^ 6;
+sbit CC7IR = 0xFF86 ^ 7;
+sbit CC7IE = 0xFF86 ^ 6;
+sbit CC8IR = 0xFF88 ^ 7;
+sbit CC8IE = 0xFF88 ^ 6;
+sbit CC9IR = 0xFF8A ^ 7;
+sbit CC9IE = 0xFF8A ^ 6;
+sbit CC10IR = 0xFF8C ^ 7;
+sbit CC10IE = 0xFF8C ^ 6;
+sbit CC11IR = 0xFF8E ^ 7;
+sbit CC11IE = 0xFF8E ^ 6;
+sbit CC12IR = 0xFF90 ^ 7;
+sbit CC12IE = 0xFF90 ^ 6;
+sbit CC13IR = 0xFF92 ^ 7;
+sbit CC13IE = 0xFF92 ^ 6;
+sbit CC14IR = 0xFF94 ^ 7;
+sbit CC14IE = 0xFF94 ^ 6;
+sbit CC15IR = 0xFF96 ^ 7;
+sbit CC15IE = 0xFF96 ^ 6;
+sbit CC16IR = 0xF160 ^ 7;
+sbit CC16IE = 0xF160 ^ 6;
+sbit CC17IR = 0xF162 ^ 7;
+sbit CC17IE = 0xF162 ^ 6;
+sbit CC18IR = 0xF164 ^ 7;
+sbit CC18IE = 0xF164 ^ 6;
+sbit CC19IR = 0xF166 ^ 7;
+sbit CC19IE = 0xF166 ^ 6;
+sbit CC20IR = 0xF168 ^ 7;
+sbit CC20IE = 0xF168 ^ 6;
+sbit CC21IR = 0xF16A ^ 7;
+sbit CC21IE = 0xF16A ^ 6;
+sbit CC22IR = 0xF16C ^ 7;
+sbit CC22IE = 0xF16C ^ 6;
+sbit CC23IR = 0xF16E ^ 7;
+sbit CC23IE = 0xF16E ^ 6;
+sbit CC24IR = 0xF170 ^ 7;
+sbit CC24IE = 0xF170 ^ 6;
+sbit CC25IR = 0xF172 ^ 7;
+sbit CC25IE = 0xF172 ^ 6;
+sbit CC26IR = 0xF174 ^ 7;
+sbit CC26IE = 0xF174 ^ 6;
+sbit CC27IR = 0xF176 ^ 7;
+sbit CC27IE = 0xF176 ^ 6;
+sbit CC28IR = 0xF178 ^ 7;
+sbit CC28IE = 0xF178 ^ 6;
+sbit CC29IR = 0xF184 ^ 7;
+sbit CC29IE = 0xF184 ^ 6;
+sbit CC30IR = 0xF18C ^ 7;
+sbit CC30IE = 0xF18C ^ 6;
+sbit CC31IR = 0xF194 ^ 7;
+sbit CC31IE = 0xF194 ^ 6;
+sbit ACC0 = 0xFF52 ^ 3;
+sbit ACC1 = 0xFF52 ^ 7;
+sbit ACC2 = 0xFF52 ^ 11;
+sbit ACC3 = 0xFF52 ^ 15;
+sbit ACC4 = 0xFF54 ^ 3;
+sbit ACC5 = 0xFF54 ^ 7;
+sbit ACC6 = 0xFF54 ^ 11;
+sbit ACC7 = 0xFF54 ^ 15;
+sbit ACC8 = 0xFF56 ^ 3;
+sbit ACC9 = 0xFF56 ^ 7;
+sbit ACC10 = 0xFF56 ^ 11;
+sbit ACC11 = 0xFF56 ^ 15;
+sbit ACC12 = 0xFF58 ^ 3;
+sbit ACC13 = 0xFF58 ^ 7;
+sbit ACC14 = 0xFF58 ^ 11;
+sbit ACC15 = 0xFF58 ^ 15;
+sbit ACC16 = 0xFF22 ^ 3;
+sbit ACC17 = 0xFF22 ^ 7;
+sbit ACC18 = 0xFF22 ^ 11;
+sbit ACC19 = 0xFF22 ^ 15;
+sbit ACC20 = 0xFF24 ^ 3;
+sbit ACC21 = 0xFF24 ^ 7;
+sbit ACC22 = 0xFF24 ^ 11;
+sbit ACC23 = 0xFF24 ^ 15;
+sbit ACC24 = 0xFF26 ^ 3;
+sbit ACC25 = 0xFF26 ^ 7;
+sbit ACC26 = 0xFF26 ^ 11;
+sbit ACC27 = 0xFF26 ^ 15;
+sbit ACC28 = 0xFF28 ^ 3;
+sbit ACC29 = 0xFF28 ^ 7;
+sbit ACC30 = 0xFF28 ^ 11;
+sbit ACC31 = 0xFF28 ^ 15;
+sbit T0IE = 0xFF9C ^ 6;
+sbit T0IR = 0xFF9C ^ 7;
+sbit T0M = 0xFF50 ^ 3;
+sbit T0R = 0xFF50 ^ 6;
+sbit T1IE = 0xFF9E ^ 6;
+sbit T1IR = 0xFF9E ^ 7;
+sbit T1M = 0xFF50 ^ 11;
+sbit T1R = 0xFF50 ^ 14;
+sbit T7IE = 0xF17A ^ 6;
+sbit T7IR = 0xF17A ^ 7;
+sbit T7M = 0xFF20 ^ 3;
+sbit T7R = 0xFF20 ^ 6;
+sbit T8IE = 0xF17C ^ 6;
+sbit T8IR = 0xF17C ^ 7;
+sbit T8M = 0xFF20 ^ 11;
+sbit T8R = 0xFF20 ^ 14;
+
+
+ sfr CP = 0xFE10;
+ sfr CSP = 0xFE08;
+ sfr DPP0 = 0xFE00;
+ sfr DPP1 = 0xFE02;
+ sfr DPP2 = 0xFE04;
+ sfr DPP3 = 0xFE06;
+ sfr MDC = 0xFF0E;
+ sfr MDH = 0xFE0C;
+ sfr MDL = 0xFE0E;
+ sfr ONES = 0xFF1E;
+ sfr PSW = 0xFF10;
+ sfr SP = 0xFE12;
+ sfr STKOV = 0xFE14;
+ sfr STKUN = 0xFE16;
+ sfr SYSCON = 0xFF12;
+ sfr TFR = 0xFFAC;
+ sfr ZEROS = 0xFF1C;
+ sfr XPERCON = 0xF024;
+ sfr BUSCON0 = 0xFF0C;
+ sfr BUSCON1 = 0xFF14;
+ sfr BUSCON2 = 0xFF16;
+ sfr BUSCON3 = 0xFF18;
+ sfr BUSCON4 = 0xFF1A;
+ sfr ADDRSEL1 = 0xFE18;
+ sfr ADDRSEL2 = 0xFE1A;
+ sfr ADDRSEL3 = 0xFE1C;
+ sfr ADDRSEL4 = 0xFE1E;
+
+sbit XPERSHARE = 0xFF12 ^ 0;
+sbit VISIBLE = 0xFF12 ^ 1;
+sbit XPEN = 0xFF12 ^ 2;
+sbit BDRSTEN = 0xFF12 ^ 3;
+sbit OWDDIS = 0xFF12 ^ 4;
+sbit CSCFG = 0xFF12 ^ 6;
+sbit WRCFG = 0xFF12 ^ 7;
+sbit CLKEN = 0xFF12 ^ 8;
+sbit BYTDIS = 0xFF12 ^ 9;
+sbit ROMEN = 0xFF12 ^ 10;
+sbit SGTEN = 0xFF12 ^ 11;
+sbit ROMS1 = 0xFF12 ^ 12;
+sbit N = 0xFF10 ^ 0;
+sbit C = 0xFF10 ^ 1;
+sbit V = 0xFF10 ^ 2;
+sbit Z = 0xFF10 ^ 3;
+sbit E = 0xFF10 ^ 4;
+sbit MULIP = 0xFF10 ^ 5;
+sbit USR0 = 0xFF10 ^ 6;
+sbit HLDEN = 0xFF10 ^ 10;
+sbit IEN = 0xFF10 ^ 11;
+sbit MDRIU = 0xFF0E ^ 4;
+sbit RWDC0 = 0xFF0C ^ 4;
+sbit MTTC0 = 0xFF0C ^ 5;
+sbit ALECTL0 = 0xFF0C ^ 9;
+sbit BUSACT0 = 0xFF0C ^ 10;
+sbit RDYEN0 = 0xFF0C ^ 12;
+sbit RWDC1 = 0xFF14 ^ 4;
+sbit MTTC1 = 0xFF14 ^ 5;
+sbit ALECTL1 = 0xFF14 ^ 9;
+sbit BUSACT1 = 0xFF14 ^ 10;
+sbit RDYEN1 = 0xFF14 ^ 12;
+sbit CSREN1 = 0xFF14 ^ 14;
+sbit CSWEN1 = 0xFF14 ^ 15;
+sbit RWDC2 = 0xFF16 ^ 4;
+sbit MTTC2 = 0xFF16 ^ 5;
+sbit ALECTL2 = 0xFF16 ^ 9;
+sbit BUSACT2 = 0xFF16 ^ 10;
+sbit RDYEN2 = 0xFF16 ^ 12;
+sbit CSREN2 = 0xFF16 ^ 14;
+sbit CSWEN2 = 0xFF16 ^ 15;
+sbit RWDC3 = 0xFF18 ^ 4;
+sbit MTTC3 = 0xFF18 ^ 5;
+sbit ALECTL3 = 0xFF18 ^ 9;
+sbit BUSACT3 = 0xFF18 ^ 10;
+sbit RDYEN3 = 0xFF18 ^ 12;
+sbit CSREN3 = 0xFF18 ^ 14;
+sbit CSWEN3 = 0xFF18 ^ 15;
+sbit RWDC4 = 0xFF1A ^ 4;
+sbit MTTC4 = 0xFF1A ^ 5;
+sbit ALECTL4 = 0xFF1A ^ 9;
+sbit BUSACT4 = 0xFF1A ^ 10;
+sbit RDYEN4 = 0xFF1A ^ 12;
+sbit CSREN4 = 0xFF1A ^ 14;
+sbit CSWEN4 = 0xFF1A ^ 15;
+sbit ILLBUS = 0xFFAC ^ 0;
+sbit ILLINA = 0xFFAC ^ 1;
+sbit ILLOPA = 0xFFAC ^ 2;
+sbit PRTFLT = 0xFFAC ^ 3;
+sbit UNDOPC = 0xFFAC ^ 7;
+sbit STKUF = 0xFFAC ^ 13;
+sbit STKOF = 0xFFAC ^ 14;
+sbit NMI = 0xFFAC ^ 15;
+
+ sfr EXICON = 0xF1C0;
+ sfr EXISEL = 0xF1DA;
+
+
+
+ sfr PECC0 = 0xFEC0;
+ sfr PECC1 = 0xFEC2;
+ sfr PECC2 = 0xFEC4;
+ sfr PECC3 = 0xFEC6;
+ sfr PECC4 = 0xFEC8;
+ sfr PECC5 = 0xFECA;
+ sfr PECC6 = 0xFECC;
+ sfr PECC7 = 0xFECE;
+#line 356
+ sfr DP0L = 0xF100;
+ sfr DP0H = 0xF102;
+ sfr DP1L = 0xF104;
+ sfr DP1H = 0xF106;
+ sfr DP2 = 0xFFC2;
+ sfr DP3 = 0xFFC6;
+ sfr DP4 = 0xFFCA;
+ sfr DP6 = 0xFFCE;
+ sfr DP7 = 0xFFD2;
+ sfr DP8 = 0xFFD6;
+
+ sfr P0L = 0xFF00;
+ sfr P0H = 0xFF02;
+ sfr P1L = 0xFF04;
+ sfr P1H = 0xFF06;
+ sfr P2 = 0xFFC0;
+ sfr P3 = 0xFFC4;
+ sfr P4 = 0xFFC8;
+ sfr P5 = 0xFFA2;
+ sfr P6 = 0xFFCC;
+ sfr P7 = 0xFFD0;
+ sfr P8 = 0xFFD4;
+ sfr P5DIDIS = 0xFFA4;
+ sfr ODP2 = 0xF1C2;
+ sfr ODP3 = 0xF1C6;
+ sfr ODP4 = 0xF1CA;
+ sfr ODP6 = 0xF1CE;
+ sfr ODP7 = 0xF1D2;
+ sfr ODP8 = 0xF1D6;
+ sfr RP0H = 0xF108;
+ sfr PICON = 0xF1C4;
+
+
+
+ sfr S0BG = 0xFEB4;
+ sfr S0CON = 0xFFB0;
+ sfr S0EIC = 0xFF70;
+ sfr S0RBUF = 0xFEB2;
+ sfr S0RIC = 0xFF6E;
+ sfr S0TBUF = 0xFEB0;
+ sfr S0TIC = 0xFF6C;
+ sfr S0TBIC = 0xF19C;
+sbit S0STP = 0xFFB0 ^ 3;
+sbit S0REN = 0xFFB0 ^ 4;
+sbit S0PEN = 0xFFB0 ^ 5;
+sbit S0FEN = 0xFFB0 ^ 6;
+sbit S0OEN = 0xFFB0 ^ 7;
+sbit S0PE = 0xFFB0 ^ 8;
+sbit S0FE = 0xFFB0 ^ 9;
+sbit S0OE = 0xFFB0 ^ 10;
+sbit S0ODD = 0xFFB0 ^ 12;
+sbit S0BRS = 0xFFB0 ^ 13;
+sbit S0LB = 0xFFB0 ^ 14;
+sbit S0R = 0xFFB0 ^ 15;
+sbit S0TIE = 0xFF6C ^ 6;
+sbit S0TIR = 0xFF6C ^ 7;
+sbit S0TBIE = 0xF19C ^ 6;
+sbit S0TBIR = 0xF19C ^ 7;
+sbit S0RIE = 0xFF6E ^ 6;
+sbit S0RIR = 0xFF6E ^ 7;
+sbit S0EIE = 0xFF70 ^ 6;
+sbit S0EIR = 0xFF70 ^ 7;
+
+ sfr SSCTIC = 0xFF72;
+ sfr SSCRIC = 0xFF74;
+ sfr SSCEIC = 0xFF76;
+ sfr SSCTB = 0xF0B0;
+ sfr SSCRB = 0xF0B2;
+ sfr SSCBR = 0xF0B4;
+ sfr SSCCON = 0xFFB2;
+sbit SSCHB = 0xFFB2 ^ 4;
+sbit SSCPH = 0xFFB2 ^ 5;
+sbit SSCPO = 0xFFB2 ^ 6;
+sbit SSCTE = 0xFFB2 ^ 8;
+sbit SSCTEN = 0xFFB2 ^ 8;
+sbit SSCRE = 0xFFB2 ^ 9;
+sbit SSCREN = 0xFFB2 ^ 9;
+sbit SSCPE = 0xFFB2 ^ 10;
+sbit SSCPEN = 0xFFB2 ^ 10;
+sbit SSCBE = 0xFFB2 ^ 11;
+sbit SSCBEN = 0xFFB2 ^ 11;
+sbit SSCBSY = 0xFFB2 ^ 12;
+sbit SSCMS = 0xFFB2 ^ 14;
+sbit SSCEN = 0xFFB2 ^ 15;
+sbit SSCTIR = 0xFF72 ^ 7;
+sbit SSCTIE = 0xFF72 ^ 6;
+sbit SSCRIR = 0xFF74 ^ 7;
+sbit SSCRIE = 0xFF74 ^ 6;
+sbit SSCEIR = 0xFF76 ^ 7;
+sbit SSCEIE = 0xFF76 ^ 6;
+
+
+ sfr CAPREL = 0xFE4A;
+ sfr CRIC = 0xFF6A;
+ sfr T2 = 0xFE40;
+ sfr T2CON = 0xFF40;
+ sfr T2IC = 0xFF60;
+ sfr T3 = 0xFE42;
+ sfr T3CON = 0xFF42;
+ sfr T3IC = 0xFF62;
+ sfr T4 = 0xFE44;
+ sfr T4CON = 0xFF44;
+ sfr T4IC = 0xFF64;
+ sfr T5 = 0xFE46;
+ sfr T5CON = 0xFF46;
+ sfr T5IC = 0xFF66;
+ sfr T6 = 0xFE48;
+ sfr T6CON = 0xFF48;
+ sfr T6IC = 0xFF68;
+ sfr WDT = 0xFEAE;
+ sfr WDTCON = 0xFFAE;
+sbit CRIE = 0xFF6A ^ 6;
+sbit CRIR = 0xFF6A ^ 7;
+sbit T2R = 0xFF40 ^ 6;
+sbit T2UD = 0xFF40 ^ 7;
+sbit T2UDE = 0xFF40 ^ 8;
+sbit T2IE = 0xFF60 ^ 6;
+sbit T2IR = 0xFF60 ^ 7;
+sbit T3R = 0xFF42 ^ 6;
+sbit T3UD = 0xFF42 ^ 7;
+sbit T3UDE = 0xFF42 ^ 8;
+sbit T3OE = 0xFF42 ^ 9;
+sbit T3OTL = 0xFF42 ^ 10;
+sbit T3IE = 0xFF62 ^ 6;
+sbit T3IR = 0xFF62 ^ 7;
+sbit T4R = 0xFF44 ^ 6;
+sbit T4UD = 0xFF44 ^ 7;
+sbit T4UDE = 0xFF44 ^ 8;
+sbit T4IE = 0xFF64 ^ 6;
+sbit T4IR = 0xFF64 ^ 7;
+sbit T5R = 0xFF46 ^ 6;
+sbit T5UD = 0xFF46 ^ 7;
+sbit T5UDE = 0xFF46 ^ 8;
+sbit T5CLR = 0xFF46 ^ 14;
+sbit T5SC = 0xFF46 ^ 15;
+sbit T5IE = 0xFF66 ^ 6;
+sbit T5IR = 0xFF66 ^ 7;
+sbit T6R = 0xFF48 ^ 6;
+sbit T6UD = 0xFF48 ^ 7;
+sbit T6UDE = 0xFF48 ^ 8;
+sbit T6OE = 0xFF48 ^ 9;
+sbit T6OTL = 0xFF48 ^ 10;
+sbit T6SR = 0xFF48 ^ 15;
+sbit T6IE = 0xFF68 ^ 6;
+sbit T6IR = 0xFF68 ^ 7;
+sbit T0IN = 0xFFC4 ^ 0;
+sbit T2IN = 0xFFC4 ^ 7;
+sbit T3IN = 0xFFC4 ^ 6;
+sbit T4IN = 0xFFC4 ^ 5;
+sbit T5IN = 0xFFA2 ^ 13;
+sbit T6IN = 0xFFA2 ^ 12;
+sbit T2EUD = 0xFFA2 ^ 15;
+sbit T3EUD = 0xFFC4 ^ 4;
+sbit T4EUD = 0xFFA2 ^ 14;
+sbit T5EUD = 0xFFA2 ^ 11;
+sbit T6EUD = 0xFFA2 ^ 10;
+sbit T3OUT = 0xFFC4 ^ 3;
+sbit CAPIN = 0xFFC4 ^ 2;
+sbit T6OUT = 0xFFC4 ^ 1;
+sbit WDTIN = 0xFFAE ^ 0;
+sbit WDTR = 0xFFAE ^ 1;
+sbit SWR = 0xFFAE ^ 2;
+sbit SHWR = 0xFFAE ^ 3;
+sbit LHWR = 0xFFAE ^ 4;
+sbit PONR = 0xFFAE ^ 5;
+sbit WDTPRE = 0xFFAE ^ 7;
+
+
+ sfr PWMCON0 = 0xFF30;
+ sfr PWMCON1 = 0xFF32;
+ sfr PW0 = 0xFE30;
+ sfr PW1 = 0xFE32;
+ sfr PW2 = 0xFE34;
+ sfr PW3 = 0xFE36;
+ sfr PWMIC = 0xF17E;
+ sfr PT0 = 0xF030;
+ sfr PT1 = 0xF032;
+ sfr PT2 = 0xF034;
+ sfr PT3 = 0xF036;
+ sfr PP0 = 0xF038;
+ sfr PP1 = 0xF03A;
+ sfr PP2 = 0xF03C;
+ sfr PP3 = 0xF03E;
+sbit PTR0 = 0xFF30 ^ 0;
+sbit PTR1 = 0xFF30 ^ 1;
+sbit PTR2 = 0xFF30 ^ 2;
+sbit PTR3 = 0xFF30 ^ 3;
+sbit PTI0 = 0xFF30 ^ 4;
+sbit PTI1 = 0xFF30 ^ 5;
+sbit PTI2 = 0xFF30 ^ 6;
+sbit PTI3 = 0xFF30 ^ 7;
+sbit PIE0 = 0xFF30 ^ 8;
+sbit PIE1 = 0xFF30 ^ 9;
+sbit PIE2 = 0xFF30 ^ 10;
+sbit PIE3 = 0xFF30 ^ 11;
+sbit PIR0 = 0xFF30 ^ 12;
+sbit PIR1 = 0xFF30 ^ 13;
+sbit PIR2 = 0xFF30 ^ 14;
+sbit PIR3 = 0xFF30 ^ 15;
+sbit PEN0 = 0xFF32 ^ 0;
+sbit PEN1 = 0xFF32 ^ 1;
+sbit PEN2 = 0xFF32 ^ 2;
+sbit PEN3 = 0xFF32 ^ 3;
+sbit PM0 = 0xFF32 ^ 4;
+sbit PM1 = 0xFF32 ^ 5;
+sbit PM2 = 0xFF32 ^ 6;
+sbit PM3 = 0xFF32 ^ 7;
+sbit PB01 = 0xFF32 ^ 12;
+sbit PS2 = 0xFF32 ^ 14;
+sbit PS3 = 0xFF32 ^ 15;
+sbit PWMIR = 0xF17E ^ 7;
+sbit PWMIE = 0xF17E ^ 6;
+
+
+ sfr IDCHIP = 0xF07C;
+ sfr IDMANUF = 0xF07E;
+ sfr IDMEM = 0xF07A;
+ sfr IDPROG = 0xF078;
+
+
+ sfr IDX0 = 0xFF08;
+ sfr IDX1 = 0xFF0A;
+ sfr MAH = 0xFE5E;
+ sfr MAL = 0xFE5C;
+ sfr MCW = 0xFFDC;
+ sfr MRW = 0xFFDA;
+ sfr MSW = 0xFFDE;
+ sfr QR0 = 0xF004;
+ sfr QR1 = 0xF006;
+ sfr QX0 = 0xF000;
+ sfr QX1 = 0xF002;
+
+sbit MS = 0xFFDC ^ 9;
+sbit MP = 0xFFDC ^ 10;
+sbit CW = 0xFFDC ^ 11;
+sbit VM = 0xFFDC ^ 12;
+sbit EM = 0xFFDC ^ 13;
+sbit LM = 0xFFDC ^ 14;
+sbit MIE = 0xFFDC ^ 15;
+
+sbit MIR = 0xFFDE ^ 15;
+sbit MSL = 0xFFDE ^ 13;
+sbit ME = 0xFFDE ^ 12;
+sbit MSV = 0xFFDE ^ 11;
+sbit MC = 0xFFDE ^ 10;
+sbit MZ = 0xFFDE ^ 9;
+sbit MN = 0xFFDE ^ 8;
+
+
+
+
+ sfr XP0IC = 0xF186;
+ sfr XP1IC = 0xF18E;
+ sfr XP2IC = 0xF196;
+ sfr XP3IC = 0xF19E;
+sbit XP0IR = 0xF186 ^ 7;
+sbit XP0IE = 0xF186 ^ 6;
+sbit XP1IR = 0xF18E ^ 7;
+sbit XP1IE = 0xF18E ^ 6;
+sbit XP2IR = 0xF196 ^ 7;
+sbit XP2IE = 0xF196 ^ 6;
+sbit XP3IR = 0xF19E ^ 7;
+sbit XP3IE = 0xF19E ^ 6;
+
+
+
+ sfr EMUCON = 0xFE0A;
+#line 42 "..\\ECMAIN.CPP"
+void __abort_execution( an_error_code code) {
+while (1) { }
+}
+#line 56
+void _main(void) {
+
+
+
+P3 |= 1024U;
+DP3 |= 1024U;
+DP3 &= 63487U;
+S0TIC = ((unsigned int)128U);
+S0RIC = ((unsigned int)0U);
+S0BG = ((unsigned int)64U);
+S0CON = ((unsigned int)32785U);
+
+
+
+__sti__init__(); return;
+}
+#line 84
+void *__nw__FUi( size_t size) {
+auto void *ptr;
+
+if (size == 0U) { size = 1U; }
+ptr = ((void *)(malloc(size)));
+if (ptr == ((void *)0)) {
+__abort_execution(ec_outofmemory);
+}
+return ptr;
+}
+#line 100
+void __dl__FPv( void *ptr) {
+free(((void huge *)ptr)); return;
+}

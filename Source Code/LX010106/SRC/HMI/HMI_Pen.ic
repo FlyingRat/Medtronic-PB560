@@ -1,0 +1,100 @@
+// v_2.45.2, Mon Mar 30 17:41:33 2020
+#line 1 "..\\..\\SRC\\HMI\\HMI_Pen.cpp"
+#line 39 "..\\..\\SRC\\HMI\\HMI_Pen.hpp"
+struct Pen;
+#line 33 "..\\..\\SRC\\GENERAL\\typedef.h"
+typedef int e_BOOL;
+#line 64
+typedef unsigned UWORD16;
+#line 39 "..\\..\\SRC\\HMI\\HMI_Pen.hpp"
+struct Pen {
+#line 50
+UWORD16 LocalCounter;
+
+
+e_BOOL Dotted;
+
+
+e_BOOL DottedState;}; extern void *__nw__FUi(unsigned);
+#line 37 "..\\..\\SRC\\HMI\\HMI_Pen.cpp"
+extern struct Pen *__ct__3PenFv(struct Pen *);
+#line 65
+extern void SwapDottedState__3PenFv(struct Pen *const);
+#line 45
+extern void SetDotted__3PenFi(struct Pen *const, e_BOOL);
+
+
+
+
+extern e_BOOL IsDotted__3PenFv(struct Pen *const);
+
+
+
+
+extern void SetDottedState__3PenFi(struct Pen *const, e_BOOL);
+
+
+
+
+extern e_BOOL IsDottedState__3PenFv(struct Pen *const);
+#line 79
+extern void SetLineThickness__3PenSFUi(UWORD16);
+
+
+
+
+extern UWORD16 GetLineThickness__3PenSFv(void);
+#line 35
+extern UWORD16 LineThickness__3Pen; UWORD16 LineThickness__3Pen = 1U;
+
+struct Pen *__ct__3PenFv( struct Pen *this)
+{  if ((this != ((struct Pen *)0)) || ((this = ((struct Pen *)(__nw__FUi(6U)))) != ((struct Pen *)0))) {
+(this->LocalCounter) = 0U;
+SetLineThickness__3PenSFUi(2U);
+SetDotted__3PenFi(this, 0);
+SetDottedState__3PenFi(this, 1); } return this;
+}
+#line 65
+void SwapDottedState__3PenFv( struct Pen *const this)
+{
+if (((this->LocalCounter)) == 0U)
+{
+SetDottedState__3PenFi(this, 0);
+}
+(this->LocalCounter)++;
+if (((this->LocalCounter)) == 2U)
+{
+SetDottedState__3PenFi(this, 1);
+(this->LocalCounter) = 0U;
+} return;
+}
+#line 45
+void SetDotted__3PenFi( struct Pen *const this,  e_BOOL _Dotted)
+{
+(this->Dotted) = _Dotted; return;
+}
+
+e_BOOL IsDotted__3PenFv( struct Pen *const this)
+{
+return (this->Dotted);
+}
+
+void SetDottedState__3PenFi( struct Pen *const this,  e_BOOL _DottedState)
+{
+(this->DottedState) = _DottedState; return;
+}
+
+e_BOOL IsDottedState__3PenFv( struct Pen *const this)
+{
+return (this->DottedState);
+}
+#line 79
+void SetLineThickness__3PenSFUi( UWORD16 _LineThickness)
+{
+LineThickness__3Pen = _LineThickness; return;
+}
+
+UWORD16 GetLineThickness__3PenSFv(void)
+{
+return LineThickness__3Pen;
+}
