@@ -1,4 +1,4 @@
-# Medtronic-PB560
+# Medtronic PB560 Ventilator
 
 The complete Open Source Kit for the Medtronic PB 560 Ventilator including the original zip-files.
 
